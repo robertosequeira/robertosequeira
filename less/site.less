@@ -1,0 +1,51 @@
+@import "bootstrap/bootstrap.less";
+// @import "jumbotron.less";
+
+@my_green: #78b500;
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+nav.navbar {
+  margin: 0;
+}
+
+.navbar-brand {
+  height: auto;
+  padding: 10px 15px;
+}
+
+#navbar {
+  li {
+    border-left: 1px solid @gray-lighter;
+    
+    &:last-child {
+      border-right: 1px solid @gray-lighter;
+    }
+
+    a {
+      padding: 37px 15px;
+      text-transform: uppercase;
+      transition: color 1s;
+
+      &:hover {
+        padding: 32px 15px 42px 15px;
+        color: #78b500;
+      }
+    }
+  }
+}
+
+div.jumbotron {
+  // padding-top: 0;
+  // padding-bottom: 20px;
+  background-color: #89be29;
+  background-color: rgba(137,190,41,.8);
+  color: white;
+
+  h1 {
+    font-size: 32px;
+  }
+}
+
