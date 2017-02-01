@@ -36,4 +36,4 @@ browser-sync start -s --directory --files='*.html, css/*.css, js/*.js'
 
 # Icons
 
-All from http://svgporn.com/ except from ruby icon (http://devicon.fr/)
+All from http://svgporn.com/
