@@ -3,6 +3,11 @@
 ## Serve development website using browser sync
 
 ```
+browser-sync start --config bs-config.js
+```
+or
+
+```
 browser-sync start -s --files='*.html, css/*.css, js/*.js'
 browser-sync start -s --directory --files='*.html, css/*.css, js/*.js'
 ```

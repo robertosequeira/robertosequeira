@@ -22,6 +22,7 @@
     <meta property="og:site_name" content="Mi sitio web"/>
     <meta property="og:description" content="Mi nombre es Roberto Sequeira, soy desarrollador y este es mi sitio web, aquí comparto información sobre mi perfil profesional."/>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 
     <!-- build:css -->
     <link href="css/site.css" rel="stylesheet">
@@ -42,9 +43,9 @@
           padding: 0;
           position: absolute;
           width: 1px;
-          white-space: nowrap; /* 1 */
+          white-space: nowrap;
       }
-
+      /*
       .tools {
         display: flex;
       }
@@ -56,20 +57,17 @@
 
       .tools .tool p {
        font-weight: bold;
-      }
+      }*/
 
       .profile {
         display: inline-block;
       }
-
-
     </style>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
 
   <body>
 
-      <!-- load combined svg file (with symbols) into body-->
+  <!-- load combined svg file (with symbols) into body-->
   <script>
     (function (doc) {
       var scripts = doc.getElementsByTagName('script')
@@ -117,167 +115,111 @@
       </div>
     </nav>
 
-    <!--<div class="jumbotron">-->
+    <div class="jumbotron">
       <div class="container">
         <div class="row" style="padding-top: 20px; ">
           <div class="col-md-2 col-md-offset-2 text-center">
-
-              <img src="img/RobertoSequeira.jpg" alt="Roberto Sequeira" class="img-responsive img-thumbnail">
-
-              <h4>
-                ¡Hola! Soy Roberto</h4>
-
-              <a href="https://cr.linkedin.com/pub/roberto-sequeira-arias/2b/62/66b" class="profile">
-                <svg class="icon">
-                  <use xlink:href="#linkedin" />
-                </svg>
-              </a>
-              &nbsp;
-              <a href="https://github.com/robertosequeira" class="profile">
-                <svg class="icon">
-                  <use xlink:href="#github" />
-                </svg>
-              </a>
+            <img src="img/RobertoSequeira.jpg" alt="Roberto Sequeira" class="img-responsive img-thumbnail">
+            <br>
+            <a href="https://cr.linkedin.com/pub/roberto-sequeira-arias/2b/62/66b" class="profile">
+              <svg class="icon">
+                <use xlink:href="#linkedin" />
+              </svg>
+            </a>
+            &nbsp;&nbsp;
+            <a href="https://github.com/robertosequeira" class="profile">
+              <svg class="icon">
+                <use xlink:href="#github" />
+              </svg>
+            </a>
           </div>
           <div class="col-md-6">
-            <div class="tools">
-              <div class="tool">
-                <svg class="icon">
-                  <use xlink:href="#rails" />
-                </svg>
-                <p>RoR</p>
-              </div>
-              <div class="tool">
-                <svg class="icon">
-                  <use xlink:href="#ruby" />
-                </svg>
-                <p>Ruby</p>
-              </div>
-              <div class="tool">
-                <svg class="icon">
-                  <use xlink:href="#html" />
-                </svg>
-                <p>HTML5</p>
-              </div>
-              <div class="tool">
-                <svg class="icon">
-                  <use xlink:href="#css" />
-                </svg>
-                <p>CSS3</p>
-              </div>
-              <div class="tool">
-                <svg class="icon">
-                  <use xlink:href="#git" />
-                </svg>
-                <p>Git</p>
-              </div>
-              <div class="tool">
-                <svg class="icon">
-                  <use xlink:href="#jquery" />
-                </svg>
-                <p>jQuery</p>
-              </div>
-              <div class="tool">
-                <svg class="icon">
-                  <use xlink:href="#bootstrap" />
-                </svg>
-                <p>Bootstrap</p>
-              </div>
-            </div>
-
-            <div class="tools">
-              <div class="tool">
-                <svg class="icon">
-                  <use xlink:href="#angular" />
-                </svg>
-                <p>Angular</p>
-              </div>
-              <div class="tool">
-                <svg class="icon">
-                  <use xlink:href="#laravel" />
-                </svg>
-                <p>Lavarel</p>
-              </div>
-              <div class="tool">
-                <svg class="icon">
-                  <use xlink:href="#php" />
-                </svg>
-                <p>PHP</p>
-              </div>
-            </div>
+            <h1>¡Hola! Soy Roberto</h1>
+            Who am I? What do I do? What have I achived?
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-md-offset-3 text-center">
+          <div class="col-md-12 text-center">
             <br>
-            <a class="btn btn-default" href="#" role="button">Descargar CV</a>&nbsp;
-            <a class="btn btn-default" href="#" role="button">Descargar CV</a>&nbsp;
+            <a class="btn btn-default" href="#" role="button">Escríbeme</a>&nbsp;
             <a class="btn btn-default" href="#" role="button">Descargar CV</a>&nbsp;
           </div>
         </div>
       </div>
-    <!--</div>-->
+    </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
+      <div id="experience" class="row">
+        <div class="col-sm-3">
           <h2 id="experience">Experiencia</h2>
-          <h4>
-            Desarrollo web - Ruby on Rails
-            <small>Growth Acceleration Partners (Marzo 2015/Actualmente)</small>
-          </h4>
-          <h4>
-            Automatización
-            <small>Growth Acceleration Partners (Febrero 2014/Marzo 2015)</small>
-          </h4>
-          <h4>
-            Desarrollo Web - .NET
-            <small>Growth Acceleration Partners (Junio 2011/Febrero 2014)</small>
-          </h4>
-          <h4>
-            Automatización
-            <small>Growth Acceleration Partners (Marzo 2013/Agosto 2013)</small>
-          </h4>
-          <h4>
-            Desarrollo Web/Soporte Técnico
-            <small>Operadora de Pensiones Complementarias de la Caja Costarricense de Seguro Social (Diciembre 2009/Junio 2011)</small>
-          </h4>
+        </div>
+
+        <div class="col-sm-9 positions">
+          <div class="position">
+            <h3>Desarrollo web - Ruby on Rails</h3>
+            <span class="text-muted">Growth Acceleration Partners - Marzo 2015/Actualmente</span>
+            <div class="description"></div>
+          </div>
+          <div class="position">
+            <h3>Automatización</h3>
+            <span class="text-muted">Growth Acceleration Partners - Febrero 2014/Marzo 2015</span>
+            <div class="description"></div>
+          </div>
+          <div class="position">
+            <h3>Desarrollo Web - .NET</h3>
+            <span class="text-muted">Growth Acceleration Partners - Junio 2011/Febrero 2014</span>
+            <div class="description"></div>
+          </div>
+          <div class="position">
+            <h3>Automatización</h3>
+            <span class="text-muted">Growth Acceleration Partners - Marzo 2013/Agosto 2013</span>
+            <div class="description"></div>
+          </div>
+          <div class="position">
+            <h3>Desarrollo Web/Soporte</h3>
+            <span class="text-muted">Operadora de Pensiones Complementarias de la CCSS - Diciembre 2009/Junio 2011</span>
+            <div class="description"></div>
+          </div>
         </div>
       </div>
-      <hr>
-      <div class="row">
-        <div class="col-md-12">
+      <div id="education" class="row">
+        <div class="col-sm-3">
           <h2 id="education">Educación</h2>
-          <h4>
-            Lic. Ingeniería Informática y Calidad de Software <br>
-            <small>Universidad Estatal a Distancia (2011/2014 )<small>
-          </h4>
-          <h4>
-            Bach. Informática Empresarial<br>
-            <small>Universidad de Costa Rica (2005/2010)</small>
-          </h4>
+        </div>
+        <div class="col-sm-9 schools">
+          <div class="school">
+            <h3>Lic. Ingeniería Informática y Calidad de Software</h3>
+            <span class="text-muted">Universidad Estatal a Distancia - 2011/2014</span>
+          </div>
+          <div class="school">
+            <h3>Bach. Informática Empresarial</h3>
+            <span class="text-muted">Universidad de Costa Rica - 2005/2010</span>
+          </div>
           <br>
-          <p class="h4 text-muted">Cursos independientes</p>
+
+          <p class="h3 text-muted">Cursos y certificationes</p>
+
           <hr>
+
           <div class="detail">
-            <h4>
-              Microsoft SQL Server 2008 Implementation and Maintenance</h4>
+            <h3>
+              Microsoft SQL Server 2008 Implementation and Maintenance</h3>
             <h5 class="text-muted">Centro Técnico de Entrenamiento <a href="http://www.ctecr.com/"
                                                                       title="Centro Técnico de Entrenamiento">(http://www.ctecr.com/)</a>
               (Septiembre-Octubre 2010)</h5>
           </div>
           <br>
-          <p class="h4 text-muted">Idiomas</p>
+          <p class="h3 text-muted">Idiomas</p>
           <hr>
           <div class="detail">
-            <h4>
-              Advanced Program - Inglés</h4>
+            <h3>
+              Advanced Program - Inglés</h3>
             <h5 class="text-muted">Centro Cultural Costarricense Norteamericano (Noviembre 2012)</h5>
             <p class="text-muted">Resultado en prueba TOEIC: 860 pts</p>
           </div>
           <div class="detail">
-            <h4>
-              English Now Integrated Skills - Inglés</h4>
+            <h3>
+              English Now Integrated Skills - Inglés</h3>
             <h5 class="text-muted">Centro Cultural Costarricense Norteamericano (Junio 2011)</h5>
           </div>
         </div>

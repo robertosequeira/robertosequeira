@@ -1,6 +1,6 @@
 //  TODO:
 //    Review: https://github.com/kogakure/gulp-tutorial/
-var 
+var
   browserSync =   require('browser-sync').create(),
   gulp =          require('gulp'),
   watch =         require('gulp-watch'),
@@ -16,7 +16,7 @@ var
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var path = require('path');
- 
+
 gulp.task('svgstore', function () {
     return gulp
         .src('./svg/*.svg')
@@ -54,7 +54,7 @@ gulp.task('watch', function () {
 /*******************************************/
 /* Build tasks                             */
 /*******************************************/
-//  TODO: 
+//  TODO:
 //    - prefix css
 
 /*  Minify css */
@@ -68,9 +68,9 @@ gulp.task('minify:css', function () {
 /*  Minify js */
 gulp.task('minify:js', function() {
   return gulp.src('./js/site.js')
-    .pipe(uglify({ 
-        optimizationLevel: 3, 
-        progessive: true, 
+    .pipe(uglify({
+        optimizationLevel: 3,
+        progessive: true,
         interlaced: true
       }))
     .pipe(rename('site.min.js'))
@@ -99,7 +99,7 @@ gulp.task('copy:assets', function(){
 /* BrowserSync Server tasks                */
 /*******************************************/
 /* Serve files from dist folder */
-gulp.task('browser-sync', function() {
+gulp.task('run', function() {
     return browserSync.init({
         server: {
             baseDir: "./dist/"
