@@ -1,3 +1,1 @@
-# Personal site
-
-## Hello
+# Hi there!
