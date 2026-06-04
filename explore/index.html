@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design Exploration — Roberto Sequeira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+      background: #0C0C0E;
+      color: #E8E8EC;
+      min-height: 100dvh;
+      padding: 3rem clamp(1.5rem, 6vw, 4rem) 5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      margin-bottom: 4rem;
+    }
+
+    .page-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.5rem, 5vw, 2.25rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-sub {
+      font-size: 0.875rem;
+      color: #6B7280;
+      line-height: 1.5;
+      max-width: 520px;
+    }
+
+    .page-sub a {
+      color: #9CA3AF;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Color psychology note */
+    .blue-note {
+      margin-top: 2rem;
+      background: #141420;
+      border: 1px solid #1E2030;
+      border-left: 3px solid #3B82F6;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 6px 6px 0;
+      max-width: 600px;
+    }
+
+    .blue-note-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #3B82F6;
+      margin-bottom: 0.75rem;
+    }
+
+    .blue-note p {
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: #9CA3AF;
+    }
+
+    .blue-note ul {
+      list-style: none;
+      margin-top: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .blue-note li {
+      font-size: 0.85rem;
+      color: #9CA3AF;
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .blue-note li::before {
+      content: '—';
+      color: #3B82F6;
+      flex-shrink: 0;
+    }
+
+    /* Options grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: #111114;
+      border: 1px solid #1C1C22;
+      border-radius: 10px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      border-color: #2D2D3A;
+      transform: translateY(-2px);
+    }
+
+    .card-preview {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-preview.midnight {
+      background: #080F1C;
+      color: #3D9AE8;
+    }
+
+    .card-preview.midnight::after {
+      content: 'Roberto\ASegueira';
+      white-space: pre;
+      position: absolute;
+      font-size: 2.8rem;
+      line-height: 0.9;
+      color: #DCE8F8;
+      left: 1.5rem;
+      bottom: 1.5rem;
+    }
+
+    .card-preview.precision {
+      background: #FFFFFF;
+      color: #1A46B0;
+    }
+
+    .card-preview.precision::after {
+      content: 'Roberto\ASequeira';
+      white-space: pre;
+      position: absolute;
+      font-size: 2.2rem;
+      line-height: 0.95;
+      color: #080C12;
+      left: 1.5rem;
+      bottom: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .card-preview.coastal {
+      background: #EEF4FF;
+      color: #1B4ED8;
+    }
+
+    .card-preview.coastal::after {
+      content: 'Roberto\ASequeira';
+      white-space: pre;
+      position: absolute;
+      font-size: 2.2rem;
+      line-height: 0.95;
+      color: #18264A;
+      left: 1.5rem;
+      bottom: 1.5rem;
+      letter-spacing: -0.025em;
+    }
+
+    .card-body {
+      padding: 1.25rem 1.5rem 1.5rem;
+      flex: 1;
+    }
+
+    .card-tag {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .tag-a { color: #3D9AE8; }
+    .tag-b { color: #1A46B0; }
+    .tag-c { color: #1B4ED8; }
+
+    .card-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .card-desc {
+      font-size: 0.825rem;
+      line-height: 1.6;
+      color: #6B7280;
+      margin-bottom: 1rem;
+    }
+
+    .card-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .pill {
+      font-size: 0.68rem;
+      font-weight: 500;
+      padding: 0.2rem 0.55rem;
+      border-radius: 2rem;
+      border: 1px solid #1C1C22;
+      color: #6B7280;
+      letter-spacing: 0.02em;
+    }
+
+    .card-open {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #4B5563;
+      margin-top: 1.25rem;
+      transition: color 0.2s;
+    }
+
+    .card:hover .card-open { color: #9CA3AF; }
+
+    .back-link {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+      color: #4B5563;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: #9CA3AF; }
+
+    a:focus-visible { outline: 2px solid #3B82F6; outline-offset: 3px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="page-title">Design Exploration</h1>
+    <p class="page-sub">Three directions for robertosequeira.info — all using blue, each with a different character.
+    Open each one at full size to get the real feel.</p>
+
+    <div class="blue-note">
+      <p class="blue-note-title">Blue — color psychology</p>
+      <p>Blue is one of the most versatile professional colors. The shade changes everything:</p>
+      <ul>
+        <li><strong>Dark navy</strong> — Authority, depth, expertise. Used by IBM, GitHub, Stripe. Signals seniority.</li>
+        <li><strong>Bold/electric blue</strong> — Precision, innovation, digital-native. Technical confidence.</li>
+        <li><strong>Soft/tonal blue</strong> — Calm, thoughtful, approachable. Intelligent but not cold.</li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <a href="option-a.html" class="card">
+      <div class="card-preview midnight" aria-hidden="true"></div>
+      <div class="card-body">
+        <p class="card-tag tag-a">Option A</p>
+        <p class="card-name">Midnight</p>
+        <p class="card-desc">Dark navy editorial. Large serif type, atmospheric depth, grain texture.
+        Authority through restraint. Feels like a premium creative portfolio.</p>
+        <div class="card-pills">
+          <span class="pill">DM Serif Display</span>
+          <span class="pill">DM Sans</span>
+          <span class="pill">Dark</span>
+          <span class="pill">Editorial</span>
+        </div>
+        <p class="card-open">Open full size →</p>
+      </div>
+    </a>
+
+    <a href="option-b.html" class="card">
+      <div class="card-preview precision" aria-hidden="true"></div>
+      <div class="card-body">
+        <p class="card-tag tag-b">Option B</p>
+        <p class="card-name">Precision</p>
+        <p class="card-desc">White background, Swiss grid structure, numbered sections, strong blue rule.
+        Technical confidence. Feels like a well-designed engineering document.</p>
+        <div class="card-pills">
+          <span class="pill">Syne</span>
+          <span class="pill">Instrument Sans</span>
+          <span class="pill">Light</span>
+          <span class="pill">Structured</span>
+        </div>
+        <p class="card-open">Open full size →</p>
+      </div>
+    </a>
+
+    <a href="option-c.html" class="card">
+      <div class="card-preview coastal" aria-hidden="true"></div>
+      <div class="card-body">
+        <p class="card-tag tag-c">Option C</p>
+        <p class="card-name">Coastal</p>
+        <p class="card-desc">Soft blue tonal layers, optical serif type, card sections.
+        Approachable and warm but professional. Feels like a modern SaaS product page.</p>
+        <div class="card-pills">
+          <span class="pill">Fraunces</span>
+          <span class="pill">Plus Jakarta Sans</span>
+          <span class="pill">Tonal</span>
+          <span class="pill">Layered</span>
+        </div>
+        <p class="card-open">Open full size →</p>
+      </div>
+    </a>
+
+  </div>
+
+  <a href="../" class="back-link">← Back to current site</a>
+
+</body>
+</html>
