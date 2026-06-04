@@ -14,125 +14,99 @@
   <meta property="og:locale" content="es">
   <meta property="og:locale:alternate" content="en">
 
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAFAFA">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#09090B">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F8FAFC">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#0B0F17">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <a href="/" class="logo" aria-label="Roberto Sequeira — inicio">
-      <picture>
-        <source srcset="img/vector/isolated-monochrome-white.svg" media="(prefers-color-scheme: dark)">
-        <img src="img/vector/isolated-monochrome-black.svg" alt="" width="36" height="36">
-      </picture>
-    </a>
-    <a href="./en/" class="lang" lang="en" hreflang="en">EN</a>
-  </header>
-
-  <main>
+  <div class="hero-zone">
+    <header>
+      <a href="/" class="logo" aria-label="Roberto Sequeira — inicio">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="36" height="36" aria-hidden="true">
+          <g transform="matrix(0.6667,0,0,0.6667,0,0)" stroke="none" fill="currentColor">
+            <path d="M89.209.791A2.715 2.715 0 0 0 87.3 0H2.7C1.988 0 1.293.288.79.791A2.717 2.717 0 0 0 0 2.7v84.6A2.706 2.706 0 0 0 2.7 90h84.6c.711 0 1.407-.288 1.909-.792A2.717 2.717 0 0 0 90 87.3V2.7c0-.71-.289-1.405-.791-1.909zM84.6 45.02h-9.925a11.695 11.695 0 0 1 3.424 8.279c0 6.479-5.251 11.729-11.729 11.729s-11.73-5.251-11.73-11.73c0-3.23 1.31-6.157 3.427-8.278H44.979v-.002h.045V31.931a11.686 11.686 0 0 0 8.28 3.425c6.479 0 11.728-5.251 11.728-11.729 0-6.479-5.249-11.73-11.728-11.73-3.232 0-6.159 1.31-8.28 3.424V5.398h39.574L84.6 45.02zm-79.202-.038h9.928a11.695 11.695 0 0 1-3.424-8.28c0-6.479 5.251-11.728 11.73-11.728 6.478 0 11.729 5.25 11.729 11.728 0 3.232-1.309 6.159-3.426 8.28h13.087v.002h-.045v13.087a11.688 11.688 0 0 0-8.28-3.425c-6.479 0-11.728 5.251-11.728 11.729 0 6.479 5.249 11.729 11.728 11.729 3.232 0 6.159-1.311 8.28-3.425v9.92H5.398V44.982z"/>
+          </g>
+        </svg>
+      </a>
+      <a href="./en/" class="lang" lang="en" hreflang="en">EN</a>
+    </header>
 
     <div class="hero">
-      <h1 class="hero-name">Roberto<br>Sequeira</h1>
-      <p class="hero-role">Director Asociado de Ingeniería</p>
-      <p class="hero-tagline">
-        Aprendiendo, construyendo, explorando.
-      </p>
+      <div class="hero-text">
+        <h1 class="hero-name">Roberto Sequeira</h1>
+        <span class="role-badge">Director Asociado de Ingeniería</span>
+        <p class="hero-tagline">Aprendiendo, construyendo, explorando.</p>
+      </div>
+      <div class="hero-skills" aria-hidden="true">
+        <span class="skill-chip sc-rails">Ruby on Rails</span>
+        <span class="skill-chip sc-ts chip-frontend">TypeScript</span>
+        <span class="skill-chip sc-aws">AWS</span>
+        <span class="skill-chip sc-react chip-frontend">React</span>
+        <span class="skill-chip sc-js chip-frontend">JavaScript</span>
+        <span class="skill-chip sc-csharp chip-dim">C#</span>
+        <span class="skill-chip sc-ai chip-accent">AI Agents</span>
+        <span class="skill-chip sc-ruby">Ruby</span>
+        <span class="skill-chip sc-multi chip-accent">Multi-Agent</span>
+        <span class="skill-chip sc-claude chip-accent">Claude Code</span>
+        <span class="skill-chip sc-angular chip-dim">Angular</span>
+        <span class="skill-chip sc-pg chip-dim">PostgreSQL</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="content-zone">
+    <div class="content">
+
+      <div class="card reveal" role="region" aria-label="Sobre mí">
+        <p class="card-label">Sobre mí</p>
+        <h2 class="card-title">Dieciséis años y contando.</h2>
+        <p class="card-body">Empecé a programar en 2009. La primera década fue en una empresa de outsourcing — lo que me dio exposición temprana y variada: distintos clientes, tecnologías e industrias. C#, Ruby, Rails, Angular; seguros, software para organizaciones sin fines de lucro, software empresarial. Pocas cosas desarrollan la versatilidad técnica más rápido que entrar a un dominio nuevo con la expectativa de entregar resultados.</p>
+        <p class="card-body">En 2021 me uní a una empresa de producto, y ese bagaje acumulado empezó a dar resultados. Con mayor propiedad llegó la oportunidad de introducir herramientas y prácticas que el equipo no había tenido la oportunidad de conocer — aportes que marcaron la diferencia en la migración completa del frontend de Ember a React. Una década adaptándose construye algo; tener el espacio para aplicarlo es cuando ese algo se multiplica. No fue un esfuerzo individual, pero proponer cosas y verlas funcionar tiene su propia satisfacción.</p>
+        <p class="card-body">Hoy soy Director Asociado de Ingeniería y tech lead, con tres personas a mi cargo y un equipo trabajando en un producto centrado en agentes de IA. Sigo escribiendo código, sigo aprendiendo.</p>
+      </div>
+
+      <div class="card reveal" role="region" aria-label="Ahora">
+        <p class="card-label">Ahora</p>
+        <h2 class="card-title">IA y sistemas multi-agente.</h2>
+        <p class="card-body">Explorando inteligencia artificial de forma práctica: agentes autónomos, sistemas multi-agente, skills para Claude Code. Construyendo cosas reales para entender cómo funciona todo esto.</p>
+        <p class="card-body">Junto a lo técnico, sigo trabajando en lo que no tiene framework ni ciclo de releases — liderazgo, comunicación, cómo hacer crecer y apoyar a un equipo. Cuanto más tiempo llevas en el rol, más claro queda que eso nunca termina.</p>
+      </div>
+
+      <div class="card reveal" role="region" aria-label="Otros proyectos">
+        <p class="card-label">Otros proyectos</p>
+        <h2 class="card-title">Compromisos que perduran.</h2>
+        <p class="card-body">En 2018 desarrollé una aplicación en Rails para un cliente independiente — la entregué rápidamente, en el mejor momento de mi experiencia con ese stack. El proyecto estuvo en pausa, regresó como empresa independiente. La plataforma tenía múltiples componentes y otros desarrolladores manejaban integraciones con sistemas externos, pero fui la única persona a cargo del núcleo en Rails y su infraestructura de principio a fin. Con el tiempo, el equipo creció. Una de las experiencias más completas que he tenido.</p>
+        <p class="card-body">También he apoyado la presencia web de <a href="https://coopeldos.com" target="_blank" rel="noopener">Coopeldos</a> por más de una década — una cooperativa cafetalera cerca de mi pueblo que trabaja con pequeños productores de la zona, incluyendo mi familia desde principios de los ochenta. Renovar el dominio, gestionar el correo en Zoho, mantener todo funcionando. Hay cosas que simplemente no se sueltan.</p>
+      </div>
+
     </div>
 
-    <hr class="section-hr">
-
-    <section aria-labelledby="sobre-label" class="reveal">
-      <p class="label" id="sobre-label">Sobre mí</p>
-      <h2 class="section-title">Dieciséis años y contando.</h2>
-      <p class="section-body">
-        Empecé a programar en 2009. La primera década fue en una empresa de outsourcing — lo que me
-        dio exposición temprana y variada: distintos clientes, tecnologías e industrias. C#, Ruby,
-        Rails, Angular; seguros, software para organizaciones sin fines de lucro, software empresarial. Pocas cosas
-        desarrollan la versatilidad técnica más rápido que entrar a un dominio nuevo con la expectativa
-        de entregar resultados.
-      </p>
-      <p class="section-body">
-        En 2021 me uní a una empresa de producto, y ese bagaje acumulado empezó a dar resultados.
-        Con mayor propiedad llegó la oportunidad de introducir herramientas y prácticas que el equipo
-        no había tenido la oportunidad de conocer — aportes que marcaron la diferencia en la migración
-        completa del frontend de Ember a React. Una década adaptándose construye algo; tener el espacio
-        para aplicarlo es cuando ese algo se multiplica. No fue un esfuerzo individual, pero proponer
-        cosas y verlas funcionar tiene su propia satisfacción.
-      </p>
-      <p class="section-body">
-        Hoy soy Director Asociado de Ingeniería y tech lead, con tres personas a mi cargo y un equipo
-        trabajando en un producto centrado en agentes de IA. Sigo escribiendo código, sigo aprendiendo.
-      </p>
-    </section>
-
-    <hr class="section-hr">
-
-    <section aria-labelledby="ahora-label" class="reveal">
-      <p class="label" id="ahora-label">Ahora</p>
-      <h2 class="section-title">IA y sistemas multi-agente.</h2>
-      <p class="section-body">
-        Explorando inteligencia artificial de forma práctica:
-        agentes autónomos, sistemas multi-agente, skills para Claude Code.
-        Construyendo cosas reales para entender cómo funciona todo esto.
-      </p>
-      <p class="section-body">
-        Junto a lo técnico, sigo trabajando en lo que no tiene framework ni ciclo de releases —
-        liderazgo, comunicación, cómo hacer crecer y apoyar a un equipo. Cuanto más tiempo llevas
-        en el rol, más claro queda que eso nunca termina.
-      </p>
-    </section>
-
-    <hr class="section-hr">
-
-    <section aria-labelledby="otros-label" class="reveal">
-      <p class="label" id="otros-label">Otros proyectos</p>
-      <h2 class="section-title">Compromisos de largo aliento.</h2>
-      <p class="section-body">
-        En 2018 desarrollé una aplicación en Rails para un cliente independiente — la entregué
-        rápidamente, en el mejor momento de mi experiencia con ese stack. El proyecto estuvo en pausa,
-        regresó como empresa independiente. La plataforma tenía múltiples componentes y otros
-        desarrolladores manejaban integraciones con sistemas externos, pero fui la única persona a
-        cargo del núcleo en Rails y su infraestructura de principio a fin. Con el tiempo, el equipo creció. Una de las experiencias más completas que he tenido.
-      </p>
-      <p class="section-body">
-        También he apoyado la presencia web de
-        <a href="https://coopeldos.com" target="_blank" rel="noopener">Coopeldos</a>
-        por más de una década — una cooperativa cafetalera cerca de mi pueblo que trabaja con pequeños
-        productores de la zona, incluyendo mi familia desde principios de los ochenta. Renovar el dominio, gestionar el
-        correo en Zoho, mantener todo funcionando. Hay cosas que simplemente no se sueltan.
-      </p>
-    </section>
-
-    <hr class="section-hr">
-
+    <footer class="reveal">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-label">Contacto</p>
+          <a href="mailto:hola@robertosequeira.info" class="contact-email">hola@robertosequeira.info</a>
+        </div>
+        <p class="footer-url">robertosequeira.info</p>
+      </div>
+    </footer>
   </main>
 
-  <footer class="reveal">
-    <p class="label">Contacto</p>
-    <a href="mailto:hola@robertosequeira.info" class="contact-email">
-      hola@robertosequeira.info
-    </a>
-    <p class="footer-line">robertosequeira.info</p>
-  </footer>
-
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
       });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
 
 </body>
