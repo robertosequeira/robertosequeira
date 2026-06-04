@@ -12,9 +12,22 @@
   --fg-2: #3F3F46;
   --muted: #71717A;
   --border: #E4E4E7;
+  --border-hover: #A1A1AA;
   --accent: #2563EB;
   --max: 700px;
   --pad: clamp(1.25rem, 6vw, 2.5rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #09090B;
+    --fg: #FAFAFA;
+    --fg-2: #D4D4D8;
+    --muted: #A1A1AA;
+    --border: #27272A;
+    --border-hover: #52525B;
+    --accent: #60A5FA;
+  }
 }
 
 html {
@@ -54,6 +67,7 @@ header {
   display: flex;
   align-items: center;
   text-decoration: none;
+  touch-action: manipulation;
 }
 
 .logo img,
@@ -72,14 +86,18 @@ header {
   text-decoration: none;
   color: var(--muted);
   border: 1px solid var(--border);
-  padding: 0.35rem 0.75rem;
+  padding: 0 0.75rem;
   border-radius: 2rem;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease-out, border-color 0.2s ease-out;
+  touch-action: manipulation;
 }
 
 .lang:hover {
   color: var(--fg);
-  border-color: #A1A1AA;
+  border-color: var(--border-hover);
 }
 
 /* ─── Hero ───────────────────────────────────────── */
@@ -97,7 +115,7 @@ header {
   letter-spacing: -0.025em;
   line-height: 1.05;
   margin-bottom: 1rem;
-  animation: fadeUp 0.55s ease both;
+  animation: fadeUp 0.55s ease-out both;
 }
 
 .hero-role {
@@ -108,7 +126,7 @@ header {
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 2.75rem;
-  animation: fadeUp 0.55s 0.08s ease both;
+  animation: fadeUp 0.55s 0.08s ease-out both;
 }
 
 .hero-tagline {
@@ -117,7 +135,7 @@ header {
   line-height: 1.55;
   color: var(--fg-2);
   max-width: 500px;
-  animation: fadeUp 0.55s 0.16s ease both;
+  animation: fadeUp 0.55s 0.16s ease-out both;
 }
 
 .hero-tagline strong {
@@ -174,14 +192,15 @@ section {
   text-decoration: underline;
   text-decoration-color: var(--border);
   text-underline-offset: 3px;
-  transition: text-decoration-color 0.2s ease;
+  touch-action: manipulation;
+  transition: text-decoration-color 0.2s ease-out;
 }
 
 .section-body a:hover {
   text-decoration-color: var(--fg);
 }
 
-/* ─── Item lists (bikes, etc.) ───────────────────── */
+/* ─── Item lists ─────────────────────────────────── */
 
 .item-list {
   list-style: none;
@@ -248,7 +267,8 @@ footer {
   font-weight: 500;
   color: var(--fg);
   text-decoration: none;
-  transition: color 0.2s ease;
+  touch-action: manipulation;
+  transition: color 0.2s ease-out;
 }
 
 .contact-email:hover {
@@ -266,7 +286,7 @@ footer {
 .reveal {
   opacity: 0;
   transform: translateY(14px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .reveal.visible {

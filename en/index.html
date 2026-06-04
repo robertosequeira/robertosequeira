@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Roberto Sequeira — Software engineer, motorcycle rider, farmer.">
+  <meta name="description" content="Roberto Sequeira — Associate Director of Engineering. Learning, building, exploring.">
   <meta name="author" content="Roberto Sequeira">
   <title>Roberto Sequeira</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://robertosequeira.info/en/">
+  <meta property="og:title" content="Roberto Sequeira">
+  <meta property="og:description" content="Associate Director of Engineering. Learning, building, exploring.">
+  <meta property="og:locale" content="en">
+  <meta property="og:locale:alternate" content="es">
+
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAFAFA">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#09090B">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,82 +28,90 @@
 
   <header>
     <a href="../" class="logo" aria-label="Roberto Sequeira — home">
-      <img src="../img/vector/isolated-monochrome-black.svg" alt="" width="36" height="36">
+      <picture>
+        <source srcset="../img/vector/isolated-monochrome-white.svg" media="(prefers-color-scheme: dark)">
+        <img src="../img/vector/isolated-monochrome-black.svg" alt="" width="36" height="36">
+      </picture>
     </a>
     <a href="../" class="lang" lang="es" hreflang="es">ES</a>
   </header>
 
-  <div class="hero">
-    <h1 class="hero-name">Roberto<br>Sequeira</h1>
-    <p class="hero-role">Associate Director of Engineering</p>
-    <p class="hero-tagline">
-      Learning, building, exploring.
-    </p>
-  </div>
+  <main>
 
-  <hr class="section-hr">
+    <div class="hero">
+      <h1 class="hero-name">Roberto<br>Sequeira</h1>
+      <p class="hero-role">Associate Director of Engineering</p>
+      <p class="hero-tagline">
+        Learning, building, exploring.
+      </p>
+    </div>
 
-  <section aria-labelledby="about-label" class="reveal">
-    <p class="label" id="about-label">About</p>
-    <h2 class="section-title">Sixteen years and counting.</h2>
-    <p class="section-body">
-      I started coding in 2009. The first decade was at an outsourcing company — which gave me
-      early, broad exposure across clients, stacks, and industries. C#, Ruby, Rails, Angular;
-      insurance, nonprofit tech, enterprise software. Few things develop technical range faster
-      than being dropped into a new domain and asked to deliver.
-    </p>
-    <p class="section-body">
-      In 2021 I joined a product company, and that accumulated experience started paying dividends.
-      With more ownership came the chance to introduce tools and practices the team hadn't
-      encountered — contributions that shaped a full frontend rewrite from Ember to React.
-      A decade of adapting across domains builds something; having the room to apply it is when
-      it compounds. Not a one-person effort, but proposing things and seeing them land is a
-      different kind of satisfaction.
-    </p>
-    <p class="section-body">
-      Today I'm Associate Director of Engineering and tech lead, with three direct reports and a
-      team working on a product built around AI agents. Still writing code, still learning.
-    </p>
-  </section>
+    <hr class="section-hr">
 
-  <hr class="section-hr">
+    <section aria-labelledby="about-label" class="reveal">
+      <p class="label" id="about-label">About</p>
+      <h2 class="section-title">Sixteen years and counting.</h2>
+      <p class="section-body">
+        I started coding in 2009. The first decade was at an outsourcing company — which gave me
+        early, broad exposure across clients, stacks, and industries. C#, Ruby, Rails, Angular;
+        insurance, nonprofit tech, enterprise software. Few things develop technical range faster
+        than being dropped into a new domain and asked to deliver.
+      </p>
+      <p class="section-body">
+        In 2021 I joined a product company, and that accumulated experience started paying dividends.
+        With more ownership came the chance to introduce tools and practices the team hadn't
+        encountered — contributions that shaped a full frontend rewrite from Ember to React.
+        A decade of adapting across domains builds something; having the room to apply it is when
+        it compounds. Not a one-person effort, but proposing things and seeing them land is a
+        different kind of satisfaction.
+      </p>
+      <p class="section-body">
+        Today I'm Associate Director of Engineering and tech lead, with three direct reports and a
+        team working on a product built around AI agents. Still writing code, still learning.
+      </p>
+    </section>
 
-  <section aria-labelledby="now-label" class="reveal">
-    <p class="label" id="now-label">Now</p>
-    <h2 class="section-title">AI and multi-agent systems.</h2>
-    <p class="section-body">
-      Exploring artificial intelligence in a practical way:
-      autonomous agents, multi-agent systems, skills for Claude Code.
-      Building real things to understand how it all works.
-    </p>
-    <p class="section-body">
-      Alongside the technical side, I keep working on the things that don't have a framework or
-      a release cycle — leadership, communication, how to grow and support a team. The longer
-      you're in the role, the more you realize those are never done.
-    </p>
-  </section>
+    <hr class="section-hr">
 
-  <hr class="section-hr">
+    <section aria-labelledby="now-label" class="reveal">
+      <p class="label" id="now-label">Now</p>
+      <h2 class="section-title">AI and multi-agent systems.</h2>
+      <p class="section-body">
+        Exploring artificial intelligence in a practical way:
+        autonomous agents, multi-agent systems, skills for Claude Code.
+        Building real things to understand how it all works.
+      </p>
+      <p class="section-body">
+        Alongside the technical side, I keep working on the things that don't have a framework or
+        a release cycle — leadership, communication, how to grow and support a team. The longer
+        you're in the role, the more you realize those are never done.
+      </p>
+    </section>
 
-  <section aria-labelledby="other-label" class="reveal">
-    <p class="label" id="other-label">Other work</p>
-    <h2 class="section-title">Long-running commitments.</h2>
-    <p class="section-body">
-      In 2018 I built a Rails app for an independent client — shipped it fast, at the top of my
-      game with the stack. The project went dormant, came back as its own company. The platform
-      had multiple components and other developers owned integrations with external systems, but
-      I was the sole person on the Rails core and its infrastructure end-to-end. The company has since grown the team. One of the most complete end-to-end experiences I've had.
-    </p>
-    <p class="section-body">
-      I've also supported the web presence of
-      <a href="https://coopeldos.com" target="_blank" rel="noopener">Coopeldos</a>
-      for over a decade — a coffee cooperative near my hometown that sources from small local
-      producers, including my family's since the early eighties. Domain renewals, email through Zoho, keeping
-      the lights on. Some things you just don't let go.
-    </p>
-  </section>
+    <hr class="section-hr">
 
-  <hr class="section-hr">
+    <section aria-labelledby="other-label" class="reveal">
+      <p class="label" id="other-label">Other work</p>
+      <h2 class="section-title">Long-running commitments.</h2>
+      <p class="section-body">
+        In 2018 I built a Rails app for an independent client — shipped it fast, at the top of my
+        game with the stack. The project went dormant, came back as its own company. The platform
+        had multiple components and other developers owned integrations with external systems, but
+        I was the sole person on the Rails core and its infrastructure end-to-end. The company has
+        since grown the team. One of the most complete end-to-end experiences I've had.
+      </p>
+      <p class="section-body">
+        I've also supported the web presence of
+        <a href="https://coopeldos.com" target="_blank" rel="noopener">Coopeldos</a>
+        for over a decade — a coffee cooperative near my hometown that sources from small local
+        producers, including my family's since the early eighties. Domain renewals, email through Zoho, keeping
+        the lights on. Some things you just don't let go.
+      </p>
+    </section>
+
+    <hr class="section-hr">
+
+  </main>
 
   <footer class="reveal">
     <p class="label">Contact</p>
