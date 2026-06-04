@@ -1,28 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Mi nombre es Roberto Sequeira y este es mi sitio web">
-    <meta name="author" content="Roberto Sequeira">
-    <title>Roberto Sequeira</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/lux/bootstrap.min.css"
-        integrity="sha384-smnSwzHqW1zKbeuSMsAM/fMQpkk7HY11LuHiwT8snL/W2QBoZtVCT4H5x1CEcJCs" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
-    <script src="https://kit.fontawesome.com/28031b24ec.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Roberto Sequeira — Ingeniero de Software, motociclista, ganadero.">
+  <meta name="author" content="Roberto Sequeira">
+  <title>Roberto Sequeira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="pt-5 text-center">
-    <main role="main" class="container">
-        <div class="p-5">
-            <img src="img/vector/isolated-monochrome-black.svg" class="text-center" role="presentation" width="100">
-            <p class="lead pt-5 pb-2">Escríbeme a hola<i class="fas fa-at"></i>robertosequeira.info</p>
-            <p class="small">
-                <span class="text-muted">Sitio en mantenimiento</span> |
-                <a href="./en" class="font-weight-bold" title="English">EN</a>&nbsp;<i class="fas fa-globe"></i>
-            </p>
-        </div>
-    </main>
+<body>
+
+  <header>
+    <a href="/" class="logo" aria-label="Roberto Sequeira — inicio">
+      <img src="img/vector/isolated-monochrome-black.svg" alt="" width="36" height="36">
+    </a>
+    <a href="./en/" class="lang" lang="en" hreflang="en">EN</a>
+  </header>
+
+  <div class="hero">
+    <h1 class="hero-name">Roberto<br>Sequeira</h1>
+    <p class="hero-role">Director Asociado de Ingeniería</p>
+    <p class="hero-tagline">
+      Aprendiendo, construyendo, explorando.
+    </p>
+  </div>
+
+  <hr class="section-hr">
+
+  <section aria-labelledby="sobre-label" class="reveal">
+    <p class="label" id="sobre-label">Sobre mí</p>
+    <h2 class="section-title">Dieciséis años y contando.</h2>
+    <p class="section-body">
+      Empecé a programar en 2009. La primera década fue en una empresa de outsourcing — lo que me
+      dio exposición temprana y variada: distintos clientes, tecnologías e industrias. C#, Ruby,
+      Rails, Angular; seguros, software para organizaciones sin fines de lucro, software empresarial. Pocas cosas
+      desarrollan la versatilidad técnica más rápido que entrar a un dominio nuevo con la expectativa
+      de entregar resultados.
+    </p>
+    <p class="section-body">
+      En 2021 me uní a una empresa de producto, y ese bagaje acumulado empezó a dar resultados.
+      Con mayor propiedad llegó la oportunidad de introducir herramientas y prácticas que el equipo
+      no había tenido la oportunidad de conocer — aportes que marcaron la diferencia en la migración
+      completa del frontend de Ember a React. Una década adaptándose construye algo; tener el espacio
+      para aplicarlo es cuando ese algo se multiplica. No fue un esfuerzo individual, pero proponer
+      cosas y verlas funcionar tiene su propia satisfacción.
+    </p>
+    <p class="section-body">
+      Hoy soy Director Asociado de Ingeniería y tech lead, con tres personas a mi cargo y un equipo
+      trabajando en un producto centrado en agentes de IA. Sigo escribiendo código, sigo aprendiendo.
+    </p>
+  </section>
+
+  <hr class="section-hr">
+
+  <section aria-labelledby="ahora-label" class="reveal">
+    <p class="label" id="ahora-label">Ahora</p>
+    <h2 class="section-title">IA y sistemas multi-agente.</h2>
+    <p class="section-body">
+      Explorando inteligencia artificial de forma práctica:
+      agentes autónomos, sistemas multi-agente, skills para Claude Code.
+      Construyendo cosas reales para entender cómo funciona todo esto.
+    </p>
+    <p class="section-body">
+      Junto a lo técnico, sigo trabajando en lo que no tiene framework ni ciclo de releases —
+      liderazgo, comunicación, cómo hacer crecer y apoyar a un equipo. Cuanto más tiempo llevas
+      en el rol, más claro queda que eso nunca termina.
+    </p>
+  </section>
+
+  <hr class="section-hr">
+
+  <section aria-labelledby="otros-label" class="reveal">
+    <p class="label" id="otros-label">Otros proyectos</p>
+    <h2 class="section-title">Compromisos de largo aliento.</h2>
+    <p class="section-body">
+      En 2018 desarrollé una aplicación en Rails para un cliente independiente — la entregué
+      rápidamente, en el mejor momento de mi experiencia con ese stack. El proyecto estuvo en pausa,
+      regresó como empresa independiente. La plataforma tenía múltiples componentes y otros
+      desarrolladores manejaban integraciones con sistemas externos, pero fui la única persona a
+      cargo del núcleo en Rails y su infraestructura de principio a fin. Con el tiempo, el equipo creció. Una de las experiencias más completas que he tenido.
+    </p>
+    <p class="section-body">
+      También he apoyado la presencia web de
+      <a href="https://coopeldos.com" target="_blank" rel="noopener">Coopeldos</a>
+      por más de una década — una cooperativa cafetalera cerca de mi pueblo que trabaja con pequeños
+      productores de la zona, incluyendo mi familia desde principios de los ochenta. Renovar el dominio, gestionar el
+      correo en Zoho, mantener todo funcionando. Hay cosas que simplemente no se sueltan.
+    </p>
+  </section>
+
+  <hr class="section-hr">
+
+  <footer class="reveal">
+    <p class="label">Contacto</p>
+    <a href="mailto:hola@robertosequeira.info" class="contact-email">
+      hola@robertosequeira.info
+    </a>
+    <p class="footer-line">robertosequeira.info</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
 </body>
 </html>
