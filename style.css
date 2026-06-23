@@ -167,3 +167,55 @@ body {
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: none; }
 }
+
+/* ─── Sections ─── */
+.sections { padding-bottom: 1rem; }
+
+.entry {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 2rem;
+  padding: 3.25rem 0;
+}
+.entry + .entry { border-top: 1px solid var(--line); }
+
+.entry-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--accent);
+  display: block;
+}
+.entry-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-top: 0.4rem;
+}
+
+.entry-title {
+  font-family: 'Spectral', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 4vw, 1.95rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.entry-body p {
+  font-size: 1rem;
+  line-height: 1.78;
+  color: var(--body);
+}
+.entry-body p + p { margin-top: 1rem; }
+
+.entry-body a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  transition: color 0.2s;
+}
+.entry-body a:hover { color: var(--accent); }
