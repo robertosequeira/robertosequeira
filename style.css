@@ -1,401 +1,49 @@
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      --bg:          #F8FAFC;
-      --bg-card:     #FFFFFF;
-      --fg:          #0F172A;
-      --fg-2:        #334155;
-      --muted:       #64748B;
-      --border:      #E2E8F0;
-      --accent:      #0369A1;
-      --accent-bg:   #EFF6FF;
-      --accent-text: #1E40AF;
-      --max:         1000px;
-      --pad:         clamp(1.5rem, 5vw, 3rem);
-    }
+:root {
+  --paper:         #FBF6EE;
+  --card:          #FFFFFF;
+  --ink:           #241F1A;
+  --body:          #5C5247;
+  --muted:         #9A8E80;
+  --line:          #EADFCF;
+  --accent:        #B0471E;
+  --footer-bg:     #241F1A;
+  --footer-fg:     #FBF6EE;
+  --footer-accent: #C99A6A;
+  --wrap:          760px;
+  --pad:           clamp(1.5rem, 5vw, 3.5rem);
+}
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg:          #0B0F17;
-        --bg-card:     #111827;
-        --fg:          #F1F5F9;
-        --fg-2:        #94A3B8;
-        --muted:       #475569;
-        --border:      #1E293B;
-        --accent:      #38BDF8;
-        --accent-bg:   rgba(56, 189, 248, 0.10);
-        --accent-text: #7DD3FC;
-      }
-    }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:         #1A1714;
+    --card:          #221E1A;
+    --ink:           #F2ECE3;
+    --body:          #B8AFA2;
+    --muted:         #8A7F72;
+    --line:          #342E27;
+    --accent:        #D2693C;
+    --footer-bg:     #120F0D;
+    --footer-fg:     #F2ECE3;
+    --footer-accent: #C99A6A;
+  }
+}
 
-    html { font-size: 16px; scroll-behavior: smooth; }
+html { font-size: 16px; scroll-behavior: smooth; }
 
-    body {
-      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-      background-color: var(--bg);
-      color: var(--fg);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+body {
+  font-family: 'Figtree', system-ui, sans-serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-    /* ─── Hero zone ─── */
-
-    .hero-zone {
-      background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 45%, #0F4C81 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Text overrides inside dark hero zone */
-    .hero-zone .lang {
-      color: rgba(255, 255, 255, 0.5);
-      border-color: rgba(255, 255, 255, 0.16);
-      background: transparent;
-    }
-    .hero-zone .lang:hover {
-      color: rgba(255, 255, 255, 0.9);
-      border-color: rgba(255, 255, 255, 0.35);
-    }
-
-    .hero-zone .hero-name    { color: #FFFFFF; }
-    .hero-zone .hero-tagline { color: rgba(255, 255, 255, 0.72); }
-    .hero-zone .role-badge {
-      background: rgba(255, 255, 255, 0.12);
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    /* ─── Content zone ─── */
-
-    .content-zone {
-      background-color: var(--bg);
-      border-radius: 28px 28px 0 0;
-      margin-top: -32px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ─── Header ─── */
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem var(--pad);
-      max-width: var(--max);
-      margin: 0 auto;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      text-decoration: none;
-      flex-shrink: 0;
-      color: rgba(255, 255, 255, 0.85);
-      transition: color 0.2s;
-    }
-    .logo:hover { color: #FFFFFF; }
-
-    .lang {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      padding: 0 0.9rem;
-      border: 1px solid var(--border);
-      border-radius: 2rem;
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      background: var(--bg-card);
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .lang:hover { color: var(--fg); border-color: var(--muted); }
-
-    /* ─── Hero ─── */
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 400px;
-      gap: 2.5rem;
-      align-items: center;
-      padding: 4.5rem var(--pad) 5rem;
-      max-width: var(--max);
-      margin: 0 auto;
-    }
-
-    @media (max-width: 820px) {
-      .hero { grid-template-columns: 1fr; padding-bottom: 4rem; }
-      .hero-skills { display: none; }
-      .hero-name { font-size: clamp(4.5rem, 12vw, 5.5rem); }
-      .hero-tagline { font-size: 1.15rem; }
-    }
-
-    .role-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.3rem 0.85rem;
-      background: var(--accent-bg);
-      color: var(--accent-text);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      border-radius: 2rem;
-      margin-top: 1.25rem;
-      margin-bottom: 1.5rem;
-      animation: fadeUp 0.5s 0.14s ease-out both;
-    }
-
-    .hero-name {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-weight: 600;
-      font-size: clamp(3.25rem, 8vw, 5.5rem);
-      line-height: 0.97;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.75rem;
-      animation: fadeUp 0.6s 0.05s ease-out both;
-    }
-
-    .hero-tagline {
-      font-size: 1.05rem;
-      line-height: 1.65;
-      color: var(--fg-2);
-      font-weight: 400;
-      animation: fadeUp 0.55s 0.22s ease-out both;
-    }
-
-    /* ─── Hero skills cloud ─── */
-
-    .hero-skills {
-      aspect-ratio: 1 / 1;
-      position: relative;
-    }
-
-    .skill-chip {
-      position: absolute;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      padding: 0.38rem 0.9rem;
-      border-radius: 2rem;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      color: rgba(255, 255, 255, 0.82);
-      white-space: nowrap;
-      animation: fadeIn 0.45s ease-out both;
-      --chip-r: 0deg;
-      transform: rotate(var(--chip-r));
-      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-    }
-    .skill-chip:hover {
-      transform: rotate(var(--chip-r)) translateY(-2px) scale(1.04);
-      background: rgba(255, 255, 255, 0.18);
-      border-color: rgba(255, 255, 255, 0.32);
-      color: rgba(255, 255, 255, 0.98);
-    }
-
-    .chip-accent {
-      background: rgba(56, 189, 248, 0.18);
-      border-color: rgba(56, 189, 248, 0.38);
-      color: rgba(186, 230, 253, 0.95);
-    }
-    .chip-accent:hover {
-      background: rgba(56, 189, 248, 0.30);
-      border-color: rgba(56, 189, 248, 0.58);
-      color: rgba(186, 230, 253, 1);
-    }
-
-    .chip-frontend {
-      background: rgba(251, 191, 36, 0.14);
-      border-color: rgba(251, 191, 36, 0.34);
-      color: rgba(253, 230, 138, 0.95);
-    }
-    .chip-frontend:hover {
-      background: rgba(251, 191, 36, 0.26);
-      border-color: rgba(251, 191, 36, 0.54);
-      color: rgba(253, 230, 138, 1);
-    }
-
-    .chip-dim {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.42);
-    }
-    .chip-dim:hover {
-      background: rgba(255, 255, 255, 0.11);
-      border-color: rgba(255, 255, 255, 0.22);
-      color: rgba(255, 255, 255, 0.65);
-    }
-
-    /* Scattered positions — fills full container, sized by recency */
-    .sc-rails   { top:  3%; left:  15%; --chip-r: -2deg;    font-size: 0.78rem; animation-delay: 0.25s; }
-    .sc-ts      { top:  7%; right:  2%; --chip-r: 1.5deg;  font-size: 0.78rem; animation-delay: 0.32s; }
-    .sc-aws     { top: 17%; left: 40%; --chip-r: -1deg;    font-size: 0.68rem; animation-delay: 0.30s; }
-    .sc-react   { top: 20%; left:  6%; --chip-r: 1deg;     font-size: 0.78rem; animation-delay: 0.38s; }
-    .sc-js      { top: 26%; right:  15%; --chip-r: -1.5deg; font-size: 0.78rem; animation-delay: 0.35s; }
-    .sc-csharp  { top: 34%; left:  3%; --chip-r: 1deg;     font-size: 0.63rem; animation-delay: 0.40s; }
-    .sc-ai      { top: 37%; left: 24%; --chip-r: -0.5deg;  font-size: 0.78rem; animation-delay: 0.44s; }
-    .sc-ruby    { top: 50%; right:  40%; --chip-r: 1.5deg;  font-size: 0.72rem; animation-delay: 0.42s; }
-    .sc-multi   { top: 50%; left:  4%; --chip-r: -1deg;    font-size: 0.78rem; animation-delay: 0.50s; }
-    .sc-claude  { top: 45%; right:  3%; --chip-r: 0.5deg;  font-size: 0.78rem; animation-delay: 0.47s; }
-    .sc-angular { top: 63%; left: 20%; --chip-r: -1.5deg;  font-size: 0.63rem; animation-delay: 0.55s; }
-    .sc-pg      { top: 68%; right:  25%; --chip-r: 1deg;    font-size: 0.63rem; animation-delay: 0.52s; }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-
-    /* ─── Content ─── */
-
-    .content {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 2.5rem var(--pad) 0;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* ─── Sections ─── */
-
-    .card {
-      padding: 3rem 0;
-    }
-
-    .card + .card {
-      padding-top: 0;
-    }
-
-    .card + .card::before {
-      content: '';
-      display: block;
-      height: 1px;
-      background: linear-gradient(
-        to right,
-        transparent 0%,
-        var(--border) 20%,
-        var(--border) 80%,
-        transparent 100%
-      );
-      margin: 3rem 0;
-    }
-
-    .card-label {
-      font-size: 0.66rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.7rem;
-      padding-left: 0.7rem;
-      border-left: 2px solid var(--accent);
-    }
-
-    .card-title {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.4rem, 3vw, 1.8rem);
-      font-weight: 600;
-      line-height: 1.2;
-      letter-spacing: -0.01em;
-      margin-bottom: 1.25rem;
-    }
-
-    .card-body {
-      font-size: 0.975rem;
-      line-height: 1.78;
-      color: var(--fg-2);
-      max-width: 68ch;
-    }
-    .card-body + .card-body { margin-top: 1rem; }
-
-    .card-body a {
-      color: var(--fg);
-      text-decoration: underline;
-      text-decoration-color: var(--border);
-      text-underline-offset: 3px;
-      transition: text-decoration-color 0.2s, color 0.2s;
-    }
-    .card-body a:hover { color: var(--accent); text-decoration-color: var(--accent); }
-
-    /* ─── Footer ─── */
-
-    footer {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 var(--pad) 5rem;
-    }
-
-    .footer-inner {
-      padding-top: 3.5rem;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-
-    .footer-label {
-      font-size: 0.66rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-email {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.1rem, 3vw, 1.4rem);
-      font-weight: 600;
-      color: var(--fg);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .contact-email:hover { color: var(--accent); }
-
-    .footer-url {
-      font-size: 0.7rem;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-    }
-
-    /* ─── Reveal ─── */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-    .reveal.visible { opacity: 1; transform: none; }
-
-    /* ─── Animations ─── */
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(14px); }
-      to   { opacity: 1; transform: none; }
-    }
-
-    /* ─── Focus ─── */
-
-    a:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-      border-radius: 4px;
-    }
-
-    /* ─── Reduced motion ─── */
-
-    @media (prefers-reduced-motion: reduce) {
-      .role-badge, .hero-name, .hero-tagline { animation: none; opacity: 1; transform: none; }
-      .reveal { opacity: 1; transform: none; transition: none; }
-      .skill-chip { animation: none; opacity: 1; transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
-      .skill-chip:hover { transform: rotate(var(--chip-r)); }
-    }
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}

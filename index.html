@@ -3,102 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Roberto Sequeira — Director Asociado de Ingeniería. Aprendiendo, construyendo, explorando.">
+  <meta name="description" content="Roberto Sequeira — Director Asociado de Ingeniería en Costa Rica. Dieciséis años construyendo software.">
   <meta name="author" content="Roberto Sequeira">
   <title>Roberto Sequeira</title>
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://robertosequeira.info/">
   <meta property="og:title" content="Roberto Sequeira">
-  <meta property="og:description" content="Director Asociado de Ingeniería. Aprendiendo, construyendo, explorando.">
+  <meta property="og:description" content="Director Asociado de Ingeniería. Dieciséis años construyendo software, y ahora también el equipo que lo construye.">
   <meta property="og:locale" content="es">
   <meta property="og:locale:alternate" content="en">
 
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F8FAFC">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#0B0F17">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FBF6EE">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#1A1714">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Spectral:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="hero-zone">
-    <header>
-      <a href="/" class="logo" aria-label="Roberto Sequeira — inicio">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="36" height="36" aria-hidden="true">
-          <g transform="matrix(0.6667,0,0,0.6667,0,0)" stroke="none" fill="currentColor">
-            <path d="M89.209.791A2.715 2.715 0 0 0 87.3 0H2.7C1.988 0 1.293.288.79.791A2.717 2.717 0 0 0 0 2.7v84.6A2.706 2.706 0 0 0 2.7 90h84.6c.711 0 1.407-.288 1.909-.792A2.717 2.717 0 0 0 90 87.3V2.7c0-.71-.289-1.405-.791-1.909zM84.6 45.02h-9.925a11.695 11.695 0 0 1 3.424 8.279c0 6.479-5.251 11.729-11.729 11.729s-11.73-5.251-11.73-11.73c0-3.23 1.31-6.157 3.427-8.278H44.979v-.002h.045V31.931a11.686 11.686 0 0 0 8.28 3.425c6.479 0 11.728-5.251 11.728-11.729 0-6.479-5.249-11.73-11.728-11.73-3.232 0-6.159 1.31-8.28 3.424V5.398h39.574L84.6 45.02zm-79.202-.038h9.928a11.695 11.695 0 0 1-3.424-8.28c0-6.479 5.251-11.728 11.73-11.728 6.478 0 11.729 5.25 11.729 11.728 0 3.232-1.309 6.159-3.426 8.28h13.087v.002h-.045v13.087a11.688 11.688 0 0 0-8.28-3.425c-6.479 0-11.728 5.251-11.728 11.729 0 6.479 5.249 11.729 11.728 11.729 3.232 0 6.159-1.311 8.28-3.425v9.92H5.398V44.982z"/>
-          </g>
-        </svg>
-      </a>
-      <a href="./en/" class="lang" lang="en" hreflang="en">EN</a>
-    </header>
+  <header class="topbar wrap">
+    <a href="/" class="logo" aria-label="Roberto Sequeira — inicio">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="32" height="32" aria-hidden="true">
+        <g transform="matrix(0.6667,0,0,0.6667,0,0)" stroke="none" fill="currentColor">
+          <path d="M89.209.791A2.715 2.715 0 0 0 87.3 0H2.7C1.988 0 1.293.288.79.791A2.717 2.717 0 0 0 0 2.7v84.6A2.706 2.706 0 0 0 2.7 90h84.6c.711 0 1.407-.288 1.909-.792A2.717 2.717 0 0 0 90 87.3V2.7c0-.71-.289-1.405-.791-1.909zM84.6 45.02h-9.925a11.695 11.695 0 0 1 3.424 8.279c0 6.479-5.251 11.729-11.729 11.729s-11.73-5.251-11.73-11.73c0-3.23 1.31-6.157 3.427-8.278H44.979v-.002h.045V31.931a11.686 11.686 0 0 0 8.28 3.425c6.479 0 11.728-5.251 11.728-11.729 0-6.479-5.249-11.73-11.728-11.73-3.232 0-6.159 1.31-8.28 3.424V5.398h39.574L84.6 45.02zm-79.202-.038h9.928a11.695 11.695 0 0 1-3.424-8.28c0-6.479 5.251-11.728 11.73-11.728 6.478 0 11.729 5.25 11.729 11.728 0 3.232-1.309 6.159-3.426 8.28h13.087v.002h-.045v13.087a11.688 11.688 0 0 0-8.28-3.425c-6.479 0-11.728 5.251-11.728 11.729 0 6.479 5.249 11.729 11.728 11.729 3.232 0 6.159-1.311 8.28-3.425v9.92H5.398V44.982z"/>
+        </g>
+      </svg>
+    </a>
+    <a href="./en/" class="lang" lang="en" hreflang="en">EN</a>
+  </header>
 
-    <div class="hero">
-      <div class="hero-text">
-        <h1 class="hero-name">Roberto Sequeira</h1>
-        <span class="role-badge">Director Asociado de Ingeniería</span>
-        <p class="hero-tagline">Aprendiendo, construyendo, explorando.</p>
-      </div>
-      <div class="hero-skills" aria-hidden="true">
-        <span class="skill-chip sc-rails">Ruby on Rails</span>
-        <span class="skill-chip sc-ts chip-frontend">TypeScript</span>
-        <span class="skill-chip sc-aws">AWS</span>
-        <span class="skill-chip sc-react chip-frontend">React</span>
-        <span class="skill-chip sc-js chip-frontend">JavaScript</span>
-        <span class="skill-chip sc-csharp chip-dim">C#</span>
-        <span class="skill-chip sc-ai chip-accent">AI Agents</span>
-        <span class="skill-chip sc-ruby">Ruby</span>
-        <span class="skill-chip sc-multi chip-accent">Multi-Agent</span>
-        <span class="skill-chip sc-claude chip-accent">Claude Code</span>
-        <span class="skill-chip sc-angular chip-dim">Angular</span>
-        <span class="skill-chip sc-pg chip-dim">PostgreSQL</span>
-      </div>
-    </div>
-  </div>
+  <main>
+    <section class="masthead wrap" aria-label="Presentación">
+      <p class="kicker">Director Asociado de Ingeniería · Costa Rica</p>
+      <h1 class="name">Roberto Sequeira</h1>
+      <hr class="rule">
+      <p class="tagline">Dieciséis años construyendo software, y ahora también el equipo que lo construye.</p>
+      <ul class="skills" aria-label="Tecnologías">
+        <li class="pill pill-accent">AI Agents</li>
+        <li class="pill">Multi-Agent</li>
+        <li class="pill">Claude Code</li>
+        <li class="pill">Ruby on Rails</li>
+        <li class="pill">TypeScript</li>
+        <li class="pill">React</li>
+        <li class="pill">JavaScript</li>
+        <li class="pill">AWS</li>
+        <li class="pill">Ruby</li>
+        <li class="pill">C#</li>
+        <li class="pill">Angular</li>
+        <li class="pill">PostgreSQL</li>
+      </ul>
+      <nav class="links" aria-label="Enlaces">
+        <a href="https://github.com/robertosequeira" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/robertosequeiraarias/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:hola@robertosequeira.info">Email</a>
+      </nav>
+    </section>
 
-  <main class="content-zone">
-    <div class="content">
+    <div class="sections wrap">
 
-      <div class="card reveal" role="region" aria-label="Sobre mí">
-        <p class="card-label">Sobre mí</p>
-        <h2 class="card-title">Dieciséis años y contando.</h2>
-        <p class="card-body">Empecé a programar en 2009. La primera década fue en una empresa de outsourcing — lo que me dio exposición temprana y variada: distintos clientes, tecnologías e industrias. C#, Ruby, Rails, Angular; seguros, software para organizaciones sin fines de lucro, software empresarial. Pocas cosas desarrollan la versatilidad técnica más rápido que entrar a un dominio nuevo con la expectativa de entregar resultados.</p>
-        <p class="card-body">En 2021 me uní a una empresa de producto, y ese bagaje acumulado empezó a dar resultados. Con mayor propiedad llegó la oportunidad de introducir herramientas y prácticas que el equipo no había tenido la oportunidad de conocer — aportes que marcaron la diferencia en la migración completa del frontend de Ember a React. Una década adaptándose construye algo; tener el espacio para aplicarlo es cuando ese algo se multiplica. No fue un esfuerzo individual, pero proponer cosas y verlas funcionar tiene su propia satisfacción.</p>
-        <p class="card-body">Hoy soy Director Asociado de Ingeniería y tech lead, con tres personas a mi cargo y un equipo trabajando en un producto centrado en agentes de IA. Sigo escribiendo código, sigo aprendiendo.</p>
-      </div>
-
-      <div class="card reveal" role="region" aria-label="Ahora">
-        <p class="card-label">Ahora</p>
-        <h2 class="card-title">IA y sistemas multi-agente.</h2>
-        <p class="card-body">Explorando inteligencia artificial de forma práctica: agentes autónomos, sistemas multi-agente, skills para Claude Code. Construyendo cosas reales para entender cómo funciona todo esto.</p>
-        <p class="card-body">Junto a lo técnico, sigo trabajando en lo que no tiene framework ni ciclo de releases — liderazgo, comunicación, cómo hacer crecer y apoyar a un equipo. Cuanto más tiempo llevas en el rol, más claro queda que eso nunca termina.</p>
-      </div>
-
-      <div class="card reveal" role="region" aria-label="Otros proyectos">
-        <p class="card-label">Otros proyectos</p>
-        <h2 class="card-title">Compromisos que perduran.</h2>
-        <p class="card-body">En 2018 desarrollé una aplicación en Rails para un cliente independiente — la entregué rápidamente, en el mejor momento de mi experiencia con ese stack. El proyecto estuvo en pausa, regresó como empresa independiente. La plataforma tenía múltiples componentes y otros desarrolladores manejaban integraciones con sistemas externos, pero fui la única persona a cargo del núcleo en Rails y su infraestructura de principio a fin. Con el tiempo, el equipo creció. Una de las experiencias más completas que he tenido.</p>
-        <p class="card-body">También he apoyado la presencia web de <a href="https://coopeldos.com" target="_blank" rel="noopener">Coopeldos</a> por más de una década — una cooperativa cafetalera cerca de mi pueblo que trabaja con pequeños productores de la zona, incluyendo mi familia desde principios de los ochenta. Renovar el dominio, gestionar el correo en Zoho, mantener todo funcionando. Hay cosas que simplemente no se sueltan.</p>
-      </div>
-
-    </div>
-
-    <footer class="reveal">
-      <div class="footer-inner">
-        <div>
-          <p class="footer-label">Contacto</p>
-          <a href="mailto:hola@robertosequeira.info" class="contact-email">hola@robertosequeira.info</a>
+      <section class="entry reveal" aria-label="Sobre mí">
+        <div class="entry-rail"><span class="entry-num">01</span><span class="entry-label">Sobre mí</span></div>
+        <div class="entry-body">
+          <h2 class="entry-title">Dieciséis años y contando.</h2>
+          <p>Empecé a programar en 2009. La primera década fue en una empresa de outsourcing — lo que me dio exposición temprana y variada: distintos clientes, tecnologías e industrias. C#, Ruby, Rails, Angular; seguros, software para organizaciones sin fines de lucro, software empresarial. Pocas cosas desarrollan la versatilidad técnica más rápido que entrar a un dominio nuevo con la expectativa de entregar resultados.</p>
+          <p>En 2021 me uní a una empresa de producto, y ese bagaje acumulado empezó a dar resultados. Con mayor propiedad llegó la oportunidad de introducir herramientas y prácticas que el equipo no había tenido la oportunidad de conocer — aportes que marcaron la diferencia en la migración completa del frontend de Ember a React. Una década adaptándose construye algo; tener el espacio para aplicarlo es cuando ese algo se multiplica. No fue un esfuerzo individual, pero proponer cosas y verlas funcionar tiene su propia satisfacción.</p>
+          <p>Hoy soy Director Asociado de Ingeniería y tech lead, con tres personas a mi cargo y un equipo trabajando en un producto centrado en agentes de IA. Sigo escribiendo código, sigo aprendiendo.</p>
         </div>
-        <p class="footer-url">robertosequeira.info</p>
-      </div>
-    </footer>
+      </section>
+
+      <section class="entry reveal" aria-label="Ahora">
+        <div class="entry-rail"><span class="entry-num">02</span><span class="entry-label">Ahora</span></div>
+        <div class="entry-body">
+          <h2 class="entry-title">Agentes de IA, en la práctica.</h2>
+          <p>Estos días mi trabajo gira en torno a agentes de IA y sistemas multi-agente — menos teoría, más construir y ver qué se rompe. Es la forma más honesta que conozco de entender una tecnología nueva.</p>
+          <p>En paralelo está lo que no tiene framework ni ciclo de releases: liderazgo, comunicación, ayudar a un equipo a crecer. Cuanto más tiempo llevo en el rol, más claro tengo que eso no se termina de aprender.</p>
+        </div>
+      </section>
+
+      <section class="entry reveal" aria-label="Otros proyectos">
+        <div class="entry-rail"><span class="entry-num">03</span><span class="entry-label">Otros proyectos</span></div>
+        <div class="entry-body">
+          <h2 class="entry-title">Compromisos que perduran.</h2>
+          <p>En 2018 desarrollé una aplicación en Rails para un cliente independiente — la entregué rápidamente, en el mejor momento de mi experiencia con ese stack. El proyecto estuvo en pausa, regresó como empresa independiente. La plataforma tenía múltiples componentes y otros desarrolladores manejaban integraciones con sistemas externos, pero fui la única persona a cargo del núcleo en Rails y su infraestructura de principio a fin. Con el tiempo, el equipo creció. Una de las experiencias más completas que he tenido.</p>
+          <p>También he apoyado la presencia web de <a href="https://coopeldos.com" target="_blank" rel="noopener">Coopeldos</a> por más de una década — una cooperativa cafetalera cerca de mi pueblo que trabaja con pequeños productores de la zona, incluyendo mi familia desde principios de los ochenta. Renovar el dominio, gestionar el correo en Zoho, mantener todo funcionando. Hay cosas que simplemente no se sueltan.</p>
+        </div>
+      </section>
+
+    </div>
   </main>
+
+  <footer class="site-footer reveal">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-label">Contacto</p>
+        <a href="mailto:hola@robertosequeira.info" class="footer-mail">hola@robertosequeira.info</a>
+      </div>
+      <nav class="footer-links" aria-label="Redes">
+        <a href="https://github.com/robertosequeira" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/robertosequeiraarias/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </nav>
+    </div>
+  </footer>
 
   <script>
     const obs = new IntersectionObserver(entries => {
