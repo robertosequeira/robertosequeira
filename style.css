@@ -5,7 +5,7 @@
   --card:          #FFFFFF;
   --ink:           #241F1A;
   --body:          #5C5247;
-  --muted:         #9A8E80;
+  --muted:         #6E6356;
   --line:          #EADFCF;
   --accent:        #B0471E;
   --footer-bg:     #241F1A;
@@ -90,12 +90,10 @@ body {
 }
 
 .kicker {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--accent);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.1rem;
 }
 
 .name {
@@ -171,28 +169,14 @@ body {
 /* ─── Sections ─── */
 .sections { padding-bottom: 1rem; }
 
-.entry {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: 2rem;
-  padding: 3.25rem 0;
-}
+.entry { padding: 3.25rem 0; }
 .entry + .entry { border-top: 1px solid var(--line); }
 
-.entry-num {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.8rem;
-  color: var(--accent);
-  display: block;
-}
 .entry-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--muted);
-  display: block;
-  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
 }
 
 .entry-title {
@@ -205,20 +189,20 @@ body {
   margin-bottom: 1rem;
 }
 
-.entry-body p {
+.entry p:not(.entry-label) {
   font-size: 1rem;
   line-height: 1.78;
   color: var(--body);
 }
-.entry-body p + p { margin-top: 1rem; }
+.entry p:not(.entry-label) + p { margin-top: 1rem; }
 
-.entry-body a {
+.entry a {
   color: var(--ink);
   text-decoration: none;
   border-bottom: 1px solid var(--accent);
   transition: color 0.2s;
 }
-.entry-body a:hover { color: var(--accent); }
+.entry a:hover { color: var(--accent); }
 
 /* ─── Footer ─── */
 .site-footer {
@@ -267,13 +251,13 @@ body {
 }
 .footer-links a:hover { opacity: 1; }
 
-/* ─── Reveal ─── */
-.reveal {
+/* ─── Reveal (gated on .js so content never ships hidden without JS) ─── */
+.js .reveal {
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
-.reveal.visible { opacity: 1; transform: none; }
+.js .reveal.visible { opacity: 1; transform: none; }
 
 /* ─── Focus ─── */
 a:focus-visible {
@@ -284,17 +268,7 @@ a:focus-visible {
 
 /* ─── Responsive ─── */
 @media (max-width: 640px) {
-  .entry {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-    padding: 2.5rem 0;
-  }
-  .entry-rail {
-    display: flex;
-    align-items: baseline;
-    gap: 0.6rem;
-  }
-  .entry-label { margin-top: 0; }
+  .entry { padding: 2.5rem 0; }
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -305,5 +279,5 @@ a:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .name, .tagline { animation: none; opacity: 1; transform: none; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
 }
