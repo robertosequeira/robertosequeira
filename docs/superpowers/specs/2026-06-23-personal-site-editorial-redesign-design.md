@@ -1,7 +1,17 @@
 # robertosequeira.info — editorial light redesign
 
 **Date:** 2026-06-23
-**Status:** Design approved (visual direction validated via brainstorm companion); pending spec review.
+**Status:** Built and shipped to `master`. See "As-built revisions" below for decisions made after approval.
+
+## As-built revisions (post-approval)
+
+During the final `/impeccable audit` two flagged AI tells were removed, superseding the spec where they conflict:
+
+- **Section headers:** the numbered markers (`01/02/03`) and uppercase tracked eyebrow labels were dropped in favor of quiet sentence-case terracotta labels (`.entry-label`); the masthead kicker is likewise sentence-case. No two-column rail. (Audit: numbered markers + eyebrows are saturated AI-grammar tells.)
+- **`--muted` (light):** darkened from `#9A8E80` to `#6E6356` to pass WCAG AA (2.98:1 → 5.45:1) for the language toggle.
+- **Reveal:** gated on a `.js` class (inline `<head>` script) so content is never hidden without JS.
+- **Body em-dashes:** reduced to ≤2 per page (AI-cadence tell); the body copy is otherwise unchanged.
+- **Tooling:** `single-font` detector rule ignored in `.impeccable/config.json` — a false positive, since Spectral/Space Mono are applied via external CSS the per-file HTML scan can't see.
 
 ## Why
 
