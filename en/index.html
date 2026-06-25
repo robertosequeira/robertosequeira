@@ -18,6 +18,7 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#1A1714">
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://robertosequeira.info/en/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +28,7 @@
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
   <header class="topbar wrap">
     <a href="../" class="logo" aria-label="Roberto Sequeira — home">
@@ -39,29 +41,25 @@
     <a href="../" class="lang" lang="es" hreflang="es">ES</a>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="masthead wrap" aria-label="Introduction">
       <p class="kicker">Associate Director of Engineering · Costa Rica</p>
       <h1 class="name">Roberto Sequeira</h1>
       <hr class="rule">
       <p class="tagline">Sixteen years building software, and now the team that builds it.</p>
       <ul class="skills" aria-label="Technologies">
-        <li class="pill pill-accent">AI Agents</li>
-        <li class="pill">Multi-Agent</li>
-        <li class="pill">Claude Code</li>
-        <li class="pill">Ruby on Rails</li>
-        <li class="pill">TypeScript</li>
-        <li class="pill">React</li>
-        <li class="pill">JavaScript</li>
-        <li class="pill">AWS</li>
-        <li class="pill">Ruby</li>
-        <li class="pill">C#</li>
-        <li class="pill">Angular</li>
-        <li class="pill">PostgreSQL</li>
+        <li class="pill pill-accent" style="--i:0">AI Agents</li>
+        <li class="pill" style="--i:1">Multi-Agent</li>
+        <li class="pill" style="--i:2">Claude Code</li>
+        <li class="pill" style="--i:3">Ruby on Rails</li>
+        <li class="pill" style="--i:4">TypeScript</li>
+        <li class="pill" style="--i:5">React</li>
+        <li class="pill" style="--i:6">AWS</li>
+        <li class="pill" style="--i:7">Ruby</li>
       </ul>
       <nav class="links" aria-label="Links">
-        <a href="https://github.com/robertosequeira" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/robertosequeiraarias/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/robertosequeira" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/robertosequeiraarias/" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a href="mailto:hola@robertosequeira.info">Email</a>
       </nav>
     </section>
@@ -76,14 +74,14 @@
         <p>Today I'm Associate Director of Engineering and tech lead, with three direct reports and a team working on a product built around AI agents. Still writing code, still learning.</p>
       </section>
 
-      <section class="entry reveal" aria-label="Now">
+      <section class="entry reveal reveal-now" aria-label="Now">
         <p class="entry-label">Now</p>
         <h2 class="entry-title">AI agents, in practice.</h2>
         <p>These days my work centers on AI agents and multi-agent systems — less theory, more building things and seeing what breaks. It's the most honest way I know to understand a new technology.</p>
         <p>Alongside it is the part with no framework or release cycle: leadership, communication, helping a team grow. The longer I'm in the role, the clearer it is that you never quite finish learning it.</p>
       </section>
 
-      <section class="entry reveal" aria-label="Other work">
+      <section class="entry reveal reveal-quiet" aria-label="Other work">
         <p class="entry-label">Other work</p>
         <h2 class="entry-title">Long-running commitments.</h2>
         <p>In 2018 I built a Rails app for an independent client and shipped it fast, at the top of my game with the stack. The project went dormant, came back as its own company. The platform had multiple components and other developers owned integrations with external systems, but I was the sole person on the Rails core and its infrastructure end-to-end. The company has since grown the team. One of the most complete end-to-end experiences I've had.</p>
@@ -93,7 +91,7 @@
     </div>
   </main>
 
-  <footer class="site-footer reveal">
+  <footer class="site-footer reveal reveal-quiet">
     <div class="footer-inner">
       <div>
         <p class="footer-label">Contact</p>
