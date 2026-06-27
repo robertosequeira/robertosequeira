@@ -122,7 +122,7 @@ body {
   color: var(--body);
   max-width: 42ch;
   text-align: justify;
-  hyphens: auto;
+
   animation: fadeUp 0.55s 0.20s cubic-bezier(0.25, 1, 0.5, 1) both;
 }
 
@@ -211,7 +211,7 @@ body {
   line-height: 1.78;
   color: var(--body);
   text-align: justify;
-  hyphens: auto;
+
 }
 .entry p:not(.entry-label) + p { margin-top: 1rem; }
 
